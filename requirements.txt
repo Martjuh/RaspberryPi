@@ -1,0 +1,4 @@
+GPIOSimulator
+asyncio
+websockets
+RPi.GPIO
