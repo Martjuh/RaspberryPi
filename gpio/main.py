@@ -13,14 +13,16 @@ import time
 print("Starting blinker!")
 print(f"Mode: {GPIO.getmode()}")
 
+ouput_pin = 11
+
 try:
     GPIO.setmode(GPIO.BCM)
-    GPIO.setup(11, GPIO.OUT, initial=GPIO.LOW)
+    GPIO.setup(ouput_pin, GPIO.OUT, initial=GPIO.LOW)
     # loop through 50 times, on/off for 1 second
     for i in range(50):
-        GPIO.output(7, True)
+        GPIO.output(ouput_pin, True)
         time.sleep(1)
-        GPIO.output(7, False)
+        GPIO.output(ouput_pin, False)
         time.sleep(1)
     GPIO.cleanup()
 except KeyboardInterrupt: # If CTRL+C is pressed, exit cleanly:
