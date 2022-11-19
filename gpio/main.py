@@ -7,9 +7,7 @@ except (ImportError, RuntimeError):
 import time
 
 
-GPIO.setwarnings(False)
-
-GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM)
 GPIO.setup(7, GPIO.OUT)
 # loop through 50 times, on/off for 1 second
 for i in range(50):
