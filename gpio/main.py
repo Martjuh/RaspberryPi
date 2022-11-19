@@ -11,10 +11,11 @@ except ImportError:
 import time
 
 print("Starting blinker!")
+print(f"Mode: {GPIO.getmode()}")
 
 try:
     GPIO.setmode(GPIO.BCM)
-    GPIO.setup(7, GPIO.OUT)
+    GPIO.setup(11, GPIO.OUT, initial=GPIO.LOW)
     # loop through 50 times, on/off for 1 second
     for i in range(50):
         GPIO.output(7, True)
