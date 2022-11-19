@@ -10,6 +10,7 @@ except ImportError:
 
 import time
 
+GPIO.cleanup()
 print("Starting blinker!")
 print(f"Mode: {GPIO.getmode()}")
 
