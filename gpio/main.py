@@ -17,6 +17,7 @@ ouput_pin = 11
 
 try:
     GPIO.setmode(GPIO.BCM)
+    print(f"Mode: {GPIO.getmode()}")
     GPIO.setup(ouput_pin, GPIO.OUT, initial=GPIO.LOW)
     # loop through 50 times, on/off for 1 second
     for i in range(50):
